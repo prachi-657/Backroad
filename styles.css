@@ -964,3 +964,53 @@ About
   margin-left: auto;
   margin-right: auto;
 }
+/*
+=============== 
+Featured Tours
+===============
+*/
+.tour-card {
+  transition: var(--transition);
+  background: var(--clr-grey-10);
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2rem;
+}
+.tour-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+.tour-img-container {
+  position: relative;
+}
+.tour-img {
+  height: 15rem;
+  object-fit: cover;
+}
+.tour-date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-primary-8);
+  margin-bottom: 0;
+  color: var(--clr-primary-1);
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+}
+.tour-info {
+  padding: 1.25rem 1.5rem;
+}
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tour-footer p {
+  line-height: 0;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+}
+.tour-btn {
+  text-align: center;
+}
