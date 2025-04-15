@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Backroads || Sign Up</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="../fontawesome-free-5.12.1-web/css/all.min.css" />
+  <!-- styles css -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <div class="nav-header">
+        <img src="../images/logo.svg" class="nav-logo" alt="Backroads" />
+        <button type="button" class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">home</a></li>
+        <li><a href="index.html#about" class="nav-link">about</a></li>
+        <li><a href="index.html#services" class="nav-link">services</a></li>
+        <li><a href="index.html#featured" class="nav-link">tours</a></li>
+        <li><a href="index.html#gallery" class="nav-link">gallery</a></li>
+      </ul>
+      <ul class="nav-icons">
+        <li><a href="#https://.facebook.com" target="_blank" class="nav-icon"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#https://.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#https://.instagram.com" target="_blank" class="nav-icon"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- signup section -->
+  <section class="section signup-section">
+    <div class="section-center signup-center">
+      <article class="signup-info">
+        <h2>Create Your Account</h2>
+        <p>Join Backroads to book tours, save favorites, and get exclusive offers.</p>
+      </article>
+      
+      <form class="signup-form" id="signup-form">
+        <div class="form-group">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Full Name"  required/>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required />
+        </div>
+        
+        <div class="form-group">
+          <input type="password" name="password" id="password" class="form-control" placeholder="Password" required />
+          <small class="form-text">Minimum 8 characters</small>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" name="confirm-password" id="confirm-password" class="form-control" placeholder="Confirm Password"  />
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn signup-btn">Sign Up</button>
+        </div>
+        
+        <p class="login-link">Already have an account? <a href="../HTML/Signin.html">Sign In</a></p>
+      </form>
+    </div>
+  </section>
+<!-- footer -->
+<footer class="section footer">
+    <!-- footer links -->
+    <ul class="footer-links">
+      <!-- single link -->
+      <li>
+        <a href="#home" class="footer-link scroll-link">home</a>
+      </li>
+      <!--end of single link -->
+      <!-- single link -->
+      <li>
+        <a href="#about" class="footer-link scroll-link">about</a>
+      </li>
+      <!--end of single link -->
+      <!-- single link -->
+      <li>
+        <a href="#services" class="footer-link scroll-link">services</a>
+      </li>
+      <!--end of single link -->
+      <!-- single link -->
+      <li>
+        <a href="#featured" class="footer-link scroll-link">featured</a>
+      </li>
+      <!--end of single link -->
+      <!-- single link -->
+      <li>
+        <a href="#gallery" class="footer-link scroll-link">gallery</a>
+      </li>
+      <!--end of single link -->
+    </ul>
+    <!-- end of footer links -->
+    <!-- footer icons -->
+    <ul class="footer-icons">
+      <!-- single icon -->
+      <li>
+        <a href="#https://.facebook.com" target="_blank" class="footer-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+      <!--end of single icon -->
+      <!-- single icon -->
+      <li>
+        <a href="#https://.twitter.com" target="_blank" class="footer-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <!--end of single icon -->
+      <!-- single icon -->
+      <li>
+        <a href="#https://.instagram.com" target="_blank" class="footer-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <!--end of single icon -->
+    </ul>
+    <!-- end of footer icons -->
+    <p class="copyright">
+      copyright &copy; backroads travel tour Company
+      <span id="date"></span> all rights reserved
+    </p>
+  </footer>
+  <!-- js -->
+  <script src="../js/app.js"></script>
+  <script src="../js/signup.js"></script>
+</body>
+</html>
