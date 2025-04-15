@@ -35,3 +35,37 @@ scrollLinks.forEach(link => {
     });
   });
 });
+// ********** Dark Mode Toggle ************
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  const themeColorMeta = document.getElementById("theme-color-meta");
+
+  if (!themeToggleBtn || !themeColorMeta) return;
+
+  // Check saved or system preference
+  const savedTheme =
+    localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+  applyTheme(savedTheme);
+
+  themeToggleBtn.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(newTheme);
+  });
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    themeColorMeta.setAttribute("content", theme === "dark" ? "#1a1a1a" : "#ffffff");
+    updateButtonIcon(theme);
+  }
+
+  function updateButtonIcon(theme) {
+    const icon = themeToggleBtn.querySelector("i");
+    if (!icon) return;
+    icon.classList.remove("fa-sun", "fa-moon");
+    icon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
+  }
+});
