@@ -49,7 +49,7 @@ Variables
 =============== 
 Global Styles
 ===============
-*/ /*Piyush committed upto this*/
+*/
 
 * {
   margin: 0;
@@ -1163,3 +1163,106 @@ Footer
   letter-spacing: var(--spacing);
   color: var(--clr-white);
 }
+/* Mobile Theme Toggle */
+.mobile-theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex; /*none by default*/
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: var(--dark-shadow);
+    font-size: 1.25rem;
+    display: none; /* Hidden by default */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mobile-theme-toggle {
+      display: flex; /* Only show on mobile */
+    }
+  }
+  @media screen and (min-width: 992px) {
+    /* Desktop styles */
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    
+    .nav-center {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .nav-icon {
+      color: var(--clr-primary-5);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    
+    .nav-icon:hover {
+      color: var(--clr-primary-8);
+    }
+    
+    .theme-toggle {
+      margin-left: 1rem;
+    }
+  }
+  /* Dark Mode Styles */
+.dark-mode {
+    --clr-white: hsl(209, 61%, 16%);
+    --clr-grey-1: #fff;
+    --clr-grey-5: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-primary-5: hsl(184, 80%, 74%);
+    background-color: var(--clr-white);
+    color: var(--clr-grey-1);
+  }
+  
+  .dark-mode .navbar {
+    background: var(--clr-white);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode .nav-link {
+    color: var(--clr-grey-1);
+  }
+  
+  .dark-mode .nav-link:hover {
+    color: var(--clr-primary-5);
+  }
+  /*changes*/
+  .dark-mode .nav-icon,
+.dark-mode .theme-toggle {
+  color: var(--clr-primary-5);
+}
+
+.dark-mode .nav-icon:hover,
+.dark-mode .theme-toggle:hover {
+  color: var(--clr-primary-8);
+} 
+  .dark-mode .footer {
+    background: var(--clr-grey-1);
+  }
+  .theme-toggle i {
+    font-size: 1.3rem; /* Increase from default 1.2rem */
+    transition: var(--transition);
+    color:cadetblue;
+  }
+  
+  .theme-toggle:hover i {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
