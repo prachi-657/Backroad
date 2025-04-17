@@ -36,36 +36,59 @@ scrollLinks.forEach(link => {
   });
 });
 // ********** Dark Mode Toggle ************
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggleBtn = document.getElementById("theme-toggle-btn");
-  const themeColorMeta = document.getElementById("theme-color-meta");
+document.addEventListener('DOMContentLoaded', function() {
+  // Shared function to sync both toggles
+  const syncThemeToggles = (isDarkMode) => {
+    // Update desktop toggle
+    const desktopIcon = document.querySelector('.theme-toggle i');
+    if (desktopIcon) {
+      desktopIcon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    
+    // Update mobile toggle
+    const mobileIcon = document.querySelector('.mobile-theme-toggle i');
+    if (mobileIcon) {
+      mobileIcon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+    }
+  };
 
-  if (!themeToggleBtn || !themeColorMeta) return;
+  // Desktop theme toggle
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    const icon = themeToggle.querySelector('i');
+    
+    // Check for saved user preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      syncThemeToggles(true);
+    }
 
-  // Check saved or system preference
-  const savedTheme =
-    localStorage.getItem("theme") ||
-    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-
-  applyTheme(savedTheme);
-
-  themeToggleBtn.addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    applyTheme(newTheme);
-  });
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-    themeColorMeta.setAttribute("content", theme === "dark" ? "#1a1a1a" : "#ffffff");
-    updateButtonIcon(theme);
+    // Theme toggle event
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      syncThemeToggles(isDarkMode);
+    });
   }
 
-  function updateButtonIcon(theme) {
-    const icon = themeToggleBtn.querySelector("i");
-    if (!icon) return;
-    icon.classList.remove("fa-sun", "fa-moon");
-    icon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
+  // Mobile theme toggle
+  const mobileToggle = document.querySelector('.mobile-theme-toggle');
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      syncThemeToggles(isDarkMode);
+    });
+
+    // Initialize mobile toggle state
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      syncThemeToggles(true);
+    }
   }
 });
