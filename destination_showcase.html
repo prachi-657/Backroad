@@ -161,6 +161,26 @@
         <p>&copy; 2025 Tours & Travels. All Rights Reserved.</p>
     </footer>
 
+    <!-- Booking Modal (hidden by default) -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Complete Your Booking</h2>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <div id="bookingSummary"></div>
+            <button type="submit" class="confirm-btn">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+<!-- Confirmation Toast (hidden) -->
+<div id="toast" class="toast">Booking confirmed! Redirecting...</div>
+
+    <script src="destination_showcase.js"></script>
+
     
 </body>
 </html>
