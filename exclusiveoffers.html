@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Travel Deals</title>
+    <style>
+        body {
+            background-color: #f5f9ff;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Deals Grid */
+        .deals-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .deals-section h2 {
+            text-align: center;
+            color: #1a5a8a;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .deals-section h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2aa6c2;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .deal-card {
+            border: none;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(42, 166, 194, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .deal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(42, 166, 194, 0.2);
+        }
+        
+        .deal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #2aa6c2;
+        }
+        
+        .deal-card .deal-info {
+            padding: 20px;
+        }
+        
+        .deal-card .deal-tag {
+            background: #e1f5fe;
+            color: #1a5a8a;
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .deal-card h3 {
+            color: #1a5a8a;
+            margin: 10px 0;
+            font-size: 1.3rem;
+        }
+        
+        .deal-card p {
+            color: #4a6b88;
+            margin: 10px 0;
+        }
+        
+        .deal-card p del {
+            color: #a8b9c9;
+        }
+        
+        .deal-card p strong {
+            color: #2aa6c2;
+            font-size: 1.2rem;
+        }
+        
+        .deal-card .btn {
+            background: linear-gradient(135deg, #2aa6c2, #1a5a8a);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            width: 100%;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .deal-card .btn:hover {
+            background: linear-gradient(135deg, #1a5a8a, #2aa6c2);
+            box-shadow: 0 4px 12px rgba(42, 166, 194, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .deals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .deals-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="deals-section">
+        <h2>✈️ Exclusive Travel Deals</h2>
+        <div class="deals-grid">
+          <!-- Deal 1 -->
+          <div class="deal-card">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bali Tour">
+            <div class="deal-info">
+              <span class="deal-tag">LIMITED OFFER</span>
+              <h3>Bali Adventure Package</h3>
+              <p><del>$1200</del> <strong>$900</strong> (5 days)</p>
+              <button class="btn">Grab This Deal</button>
+            </div>
+          </div>
+          <!-- Deal 2 -->
+          <div class="deal-card">
+            <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paris Tour">
+            <div class="deal-info">
+              <span class="deal-tag">BONUS MEALS</span>
+              <h3>Romantic Paris Getaway</h3>
+              <p><del>$1500</del> <strong>$1300</strong> (7 days)</p>
+              <button class="btn">Grab This Deal</button>
+            </div>
+          </div>
+          <!-- Deal 3 -->
+          <div class="deal-card">
+            <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tokyo Tour">
+            <div class="deal-info">
+              <span class="deal-tag">GROUP DISCOUNT</span>
+              <h3>Tokyo Cultural Experience</h3>
+              <p><del>$2000</del> <strong>$1600</strong> (4+ people)</p>
+              <button class="btn">Grab This Deal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
