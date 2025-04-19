@@ -132,6 +132,129 @@
       <span id="date"></span> all rights reserved
     </p>
   </footer>
+  <style>
+    /* =============== */
+/* Signup Page Styles */
+/* =============== */
+.signup-section {
+  padding: 5rem 0;
+  background: var(--clr-grey-10);
+}
+
+.signup-center {
+  display: grid;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+}
+
+.signup-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.signup-info h2 {
+  color: var(--clr-primary-5);
+  margin-bottom: 1rem;
+}
+
+.signup-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--clr-grey-8);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--clr-primary-5);
+  box-shadow: 0 0 0 2px var(--clr-primary-8);
+}
+
+.form-label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  background: var(--clr-white);
+  padding: 0 0.2rem;
+  color: var(--clr-primary-5);
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--clr-grey-5);
+  font-size: 0.8rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--clr-grey-5);
+}
+
+.login-link a {
+  color: var(--clr-primary-5);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.login-link a:hover {
+  color: var(--clr-primary-1);
+}
+
+.dark-mode .signup-center {
+  background: var(--clr-grey-9);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .form-control {
+  background: var(--clr-grey-8);
+  border-color: var(--clr-grey-7);
+  color: var(--clr-grey-1);
+}
+
+.dark-mode .form-label {
+  background: var(--clr-grey-9);
+}
+
+.dark-mode .form-control:focus + .form-label,
+.dark-mode .form-control:not(:placeholder-shown) + .form-label {
+  background: var(--clr-grey-9);
+}
+  </style>
   <!-- js -->
   <script src="../js/app.js"></script>
   <script src="../js/signup.js"></script>
