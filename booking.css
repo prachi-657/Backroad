@@ -1,0 +1,49 @@
+/* booking.css - integrates with your existing style.css */
+.booking-form-container {
+  background: var(--clr-white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-row {
+  margin-bottom: 1.5rem;
+}
+
+.form-row label {
+  display: block;
+  font-weight: 600;
+  color: var(--clr-grey-1);
+  margin-bottom: 0.5rem;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--clr-grey-9);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: var(--clr-primary-5);
+  box-shadow: 0 0 5px rgba(0, 183, 255, 0.3);
+}
+
+.form-row .btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--clr-primary-5);
+  border: none;
+  color: var(--clr-white);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.form-row .btn:hover {
+  background-color: var(--clr-primary-3);
+}
