@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BACKROADS - Your Travel Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f9ff;
+            color: #4a6fa5;
+            line-height: 1.8;
+        }
+        
+        /* Container Styles */
+        .about-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(74, 111, 165, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        /* Image Section */
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            background: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center/cover;
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 111, 165, 0.7), rgba(100, 149, 237, 0.5));
+        }
+        
+        /* Content Section */
+        .about-content-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 50px;
+        }
+        
+        /* Heading Styles */
+        .about-heading {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .about-heading h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #2a4b7c;
+            line-height: 1.2;
+        }
+        
+        .about-heading h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #7d9bc8;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .about-heading::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #6495ed, #a2c4fa);
+            bottom: -15px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        /* Paragraph Styles */
+        .about-content {
+            font-size: 1.1rem;
+            color: #5a7aaf;
+            margin-bottom: 40px;
+        }
+        
+        .about-content p {
+            margin-bottom: 25px;
+        }
+        
+        /* Highlight Styles */
+        .highlight {
+            color: #2a4b7c;
+            font-weight: 600;
+        }
+        
+        /* Call-to-Action Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6495ed, #7eb1ff);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(100, 149, 237, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(100, 149, 237, 0.4);
+            background: linear-gradient(135deg, #5a8ae0, #6ca1ff);
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2a4b7c;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7d9bc8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-container {
+                margin: 20px;
+                flex-direction: column;
+            }
+            
+            .about-heading h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                font-size: 1rem;
+            }
+            
+            .about-content-section {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <div class="about-image"></div>
+        <div class="about-content-section">
+            <div class="about-heading">
+                <h2>Our Story</h2>
+                <h1>Welcome to <span class="highlight">BACKROADS</span></h1>
+            </div>
+            <div class="about-content">
+                <p>
+                    Your trusted companion for unforgettable journeys! At the heart of our
+                    mission is the desire to connect people with the world's most breathtaking destinations, rich cultures,
+                    and unique experiences.
+                </p>
+                <p>
+                    Founded by travel enthusiasts, <span class="highlight">BACKROADS</span> is dedicated to crafting
+                    personalized travel itineraries that cater to your passions and aspirations. Whether you're an adventure
+                    seeker, a history buff, or someone looking for serene getaways, we ensure every trip is tailored to
+                    perfection.
+                </p>
+                <p>
+                    Our team of seasoned travel experts works tirelessly to bring you the best deals, insider
+                    tips, and seamless travel experiences. From exploring ancient landmarks to uncovering hidden gems,
+                    we go the extra mile to make your travel dreams a reality.
+                </p>
+            </div>
+            <a href="destination_showcase.html" class="cta-button">Start Your Journey</a>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5k+</div>
+                    <div class="stat-label">Happy Travelers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Destinations</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
