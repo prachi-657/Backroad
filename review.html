@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Experiences - Customer Reviews</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Experiences</h1>
+        <p>See what our customers say about our tours and services</p>
+    </header>
+    
+    <div class="rating-summary">
+        <div class="average-rating">
+            <div class="average-rating-number">4.8</div>
+            <div class="stars">★★★★★</div>
+            <div>Based on 247 reviews</div>
+        </div>
+        
+        <div class="rating-bars">
+            <div class="rating-bar">
+                <span>5 stars</span>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 85%"></div>
+                </div>
+                <span>85%</span>
+            </div>
+            <div class="rating-bar">
+                <span>4 stars</span>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 10%"></div>
+                </div>
+                <span>10%</span>
+            </div>
+            <div class="rating-bar">
+                <span>3 stars</span>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 3%"></div>
+                </div>
+                <span>3%</span>
+            </div>
+            <div class="rating-bar">
+                <span>2 stars</span>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 1%"></div>
+                </div>
+                <span>1%</span>
+            </div>
+            <div class="rating-bar">
+                <span>1 star</span>
+                <div class="bar">
+                    <div class="bar-fill" style="width: 1%"></div>
+                </div>
+                <span>1%</span>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Recent Reviews</h2>
+    
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-header">
+                <div>
+                    <div class="reviewer-name">Sarah Johnson</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review-date">March 15, 2023</div>
+            </div>
+            <div class="review-tour">Bali Cultural Tour</div>
+            <div class="review-text">
+                The Bali tour was absolutely amazing! Our guide was knowledgeable and friendly. The itinerary was perfect with a great mix of cultural experiences and free time. The hotels were beautiful and the food was delicious. Would definitely recommend!
+            </div>
+            <div class="review-images">
+                <img src="https://media.istockphoto.com/id/653953140/photo/hindu-temple-in-bali.jpg?s=612x612&w=0&k=20&c=ysj3S2kV1ZgCr4QZWDzjvHRowCI3-cR1xQNnqE8-BS4=" alt="Bali Temple" class="review-image">
+                <img src="https://www.intrepidtravel.com/adventures/wp-content/uploads/2019/02/Intrepid-Travel-BALI_UBUD_TIRTA_EMPUL_TEMPLE_1B2A5937.jpg" alt="Bali Beach" class="review-image">
+            </div>
+        </div>
+        
+        <div class="review-card">
+            <div class="review-header">
+                <div>
+                    <div class="reviewer-name">Michael Chen</div>
+                    <div class="stars">★★★★☆</div>
+                </div>
+                <div class="review-date">February 28, 2023</div>
+            </div>
+            <div class="review-tour">European Highlights</div>
+            <div class="review-text">
+                Great tour covering multiple European cities. The transportation between cities was smooth and the guides were excellent. Only minor complaint is that some hotels were a bit far from city centers. Overall a wonderful experience.
+            </div>
+            <div class="review-images">
+                <img src="https://delivery.gfobcontent.com/api/public/content/26434a8584014f8e977c45dcae74a24c?v=a4fbab0a" alt="Eiffel Tower" class="review-image">
+            </div>
+        </div>
+        
+        <div class="review-card">
+            <div class="review-header">
+                <div>
+                    <div class="reviewer-name">Priya Patel</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review-date">January 10, 2023</div>
+            </div>
+            <div class="review-tour">Safari Adventure in Kenya</div>
+            <div class="review-text">
+                This was the trip of a lifetime! We saw the Big Five within the first two days. The safari guides were incredibly knowledgeable about wildlife and conservation. The lodges were luxurious and the staff went above and beyond to make our stay special.
+            </div>
+            <div class="review-images">
+                <img src="https://media.istockphoto.com/id/168252293/photo/safari-car-is-waiting-for-crossing-elephants.jpg?s=612x612&w=0&k=20&c=XgXFWCizGZQ6swKafSqvHf1Mq5NQGYqfQA7kYsYkVgI=" alt="Lion on Safari" class="review-image">
+                <img src="https://media.coraltreetravel.com/uploads/2021/03/Exclusive-use-safari-car-scaled.jpg" alt="Safari Lodge" class="review-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXJglIUXbckBUxErn8reyE_P6KrQkWo42Mw&s" alt="Elephants" class="review-image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="add-review">
+        <h2>Share Your Experience</h2>
+        <form id="review-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="tour">Tour Package</label>
+                <select id="" required>
+                    <option value="">Select a tour</option>
+                    <option value="bali">Bali Cultural Tour</option>
+                    <option value="europe">European Highlights</option>
+                    <option value="kenya">Safari Adventure in Kenya</option>
+                    <option value="japan">Japan Cherry Blossom Tour</option>
+                    <option value="peru">Machu Picchu Expedition</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Your Rating</label>
+                <div class="rating-input">
+                    <span class="star" data-value="1">☆</span>
+                    <span class="star" data-value="2">☆</span>
+                    <span class="star" data-value="3">☆</span>
+                    <span class="star" data-value="4">☆</span>
+                    <span class="star" data-value="5">☆</span>
+                </div>
+                <input type="hidden" id="rating" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="review">Your Review</label>
+                <textarea id="review" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Upload Photos (Optional)</label>
+                <input type="file" multiple accept="image/*">
+            </div>
+            
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+    
+    <script src="review.js"></script>
+</body>
+</html>
