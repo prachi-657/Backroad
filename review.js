@@ -19,32 +19,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Form submission
     document.getElementById('review-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        
-       
-        if (!ratingInput.value) {
-            
-            console.error('No rating selected');
-            
-        }
-        
-        
-        const reviewText = document.getElementById('review').value;
-        if (reviewText.trim().length === 0) {
-            
-            console.error('Review text is empty');
-            
-        }
-        
         alert('Thank you for your review! It will be published after moderation.');
-        
-        
         this.reset();
         stars.forEach(star => {
             star.textContent = '☆';
             star.classList.remove('active');
         });
-        
+    });
+});
+document.getElementById('review-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your review! It will be published after moderation.');
+        this.reset();
+        stars.forEach(star => {
+            star.textContent = '☆';
+            star.classList.remove('active');
+        });
     });
 });
