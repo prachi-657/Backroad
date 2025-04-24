@@ -1,59 +1,168 @@
 <!-- booking.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a Tour | Backroad</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/booking.css" />
-  </head>
-  <body>
-      <header>
-        <div class="toggle-dark-mode">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Tour | Backroad</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="booking.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-left">
+          <div class="toggle-dark-mode">
             <label class="switch">
-                <label for="darkModeToggle" class="visually-hidden">Toggle Dark Mode</label>
-                <input type="checkbox" id="darkModeToggle" title="Toggle Dark Mode">
-                <span class="slider"></span>
+              <input type="checkbox" id="darkModeToggle" title="Toggle Dark Mode">
+              <span class="slider"></span>
             </label>
-        </div>
-      </header>
-    <section class="section">
-      <div class="section-title">
-        <h2>Book Your <span>Tour</span></h2>
+          </div>
+          <h2 class="nav-logo">Backroad</h2>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link btn">Home</a></li>
+          <li><a href="about.html" class="nav-link btn">About</a></li>
+          <li><a href="destination_showcase.html" class="nav-link btn">Destinations</a></li>
+          <li><a href="offerpopup.html" class="nav-link btn">Offers</a></li>
+          <li><a href="booking.html" class="nav-link btn">Booking</a></li>
+          <li><a href="#" class="nav-link btn">Sign Up/Login</a></li>
+        </ul>
       </div>
+    </nav>
+  </header>
+  <section class="section">
+    <div class="section-title">
+      <h2>Book Your <span>Tour</span></h2>
+    </div>
 
-      <div class="section-center booking-form-container">
-        <form id="bookingForm" onsubmit="return validateBookingForm()" class="form">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required />
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required />
-          </div>
-          <div class="form-row">
-            <label for="destination">Destination</label>
-            <input type="text" id="destination" placeholder="Enter Destination" required />
-          </div>
-          <div class="form-row">
-            <label for="date">Date</label>
-            <input type="date" id="date" required />
-          </div>
-          <div class="form-row">
-            <label for="people">No. of People</label>
-            <input type="number" id="people" placeholder="1 or more" min="1" required />
-          </div>
-          <div class="form-row">
-            <button type="submit" class="btn">Book Now</button>
-          </div>
-        </form>
-      </div>
-    </section>
+    <div class="section-center booking-form-container">
+      <form id="bookingForm" onsubmit="return validateBookingForm()" class="form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-row">
+          <label for="destination">Destination</label>
+          <select id="destination" required>
+            <option value="" disabled>Select a Destination</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Bali">Bali</option>
+            <option value="Swiss Alps">Swiss Alps</option>
+            <option value="Himalayas">Himalayas</option>
+            <option value="Pyramids of Giza">Pyramids of Giza</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="date">Date</label>
+          <input type="date" id="date" required />
+        </div>
+        <div class="form-row">
+          <label for="people">No. of People</label>
+          <input type="number" id="people" placeholder="1 or more" min="1" required />
+        </div>
+        <div class="form-row">
+          <button href="confirmation.html" type="submit" class="btn">Book Now</button>
+        </div>
+      </form>
+    </div>
+    <p>Destination: <span id="destination">N/A</span></p>
+  </section>
+  <!-- footer -->
+  <footer class="section footer"></footer>
+  <!-- footer icons -->
+  <ul class="footer-icons">
+    <!-- single icon -->
+    <li>
+      <a href="#https://.facebook.com" target="_blank" class="footer-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+    <!--end of single icon -->
+    <!-- single icon -->
+    <li>
+      <a href="#https://.twitter.com" target="_blank" class="footer-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <!--end of single icon -->
+    <!-- single icon -->
+    <li>
+      <a href="#https://.instagram.com" target="_blank" class="footer-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    <!--end of single icon -->
+  </ul>
+  <!-- end of footer icons -->
+  <p class="copyright">
+    copyright &copy; backroads travel tour Company
+    <span id="date"></span> all rights reserved
+  </p>
+  </footer>
+  <!-- end of footer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dateInput = document.getElementById("date");
+      const today = new Date().toISOString().split("T")[0];
+      dateInput.setAttribute("min", today);
+    });
 
-    <!-- Footer (optional) -->
+    function validateBookingForm() {
+      return false;
+    }
 
-    <script src="js/booking.js"></script>
-  </body>
+    document.getElementById("bookingForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const destination = document.getElementById("destination").value;
+      const date = document.getElementById("date").value;
+      const people = document.getElementById("people").value;
+
+      // Store values in localStorage
+      localStorage.setItem("bookingName", name);
+      localStorage.setItem("bookingEmail", email);
+      localStorage.setItem("bookingDestination", destination);
+      localStorage.setItem("bookingDate", date);
+      localStorage.setItem("bookingPeople", people);
+
+      // Redirect to confirmation page
+      window.location.href = "confirmation.html";
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Function to get query parameters from the URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Pre-fill the destination field if a destination is passed in the URL
+      const destination = getQueryParam("destination");
+      if (destination) {
+        const destinationSelect = document.getElementById("destination");
+        const options = destinationSelect.options;
+
+        // Loop through options to find and select the matching destination
+        for (let i = 0; i < options.length; i++) {
+          if (options[i].value === destination) {
+            destinationSelect.value = destination;
+            break;
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
 </html>
