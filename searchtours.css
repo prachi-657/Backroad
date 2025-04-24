@@ -8,6 +8,7 @@
     width: 100%;
     padding: 12px 20px;
     border: 2px solid #e4e1e1;
+    font-family: 'Arial', sans-serif;
     border-radius: 30px;
     font-size: 16px;
   }
@@ -33,6 +34,7 @@
     border: 1px solid #ddd;
     border-radius: 0 0 10px 10px;
     z-index: 1000;
+      font-family: 'Arial', sans-serif;
   }
   
   .search-suggestions div {
@@ -63,14 +65,19 @@
     height: 200px;
     overflow: hidden;
   }
-  
+   body {
+    background-color: #0b5b6c;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
   .tour-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
-  
+ 
   .tour-card:hover .tour-image {
     transform: scale(1.05);
   }
@@ -89,6 +96,7 @@
   
   .tour-details {
     padding: 20px;
+      color: white;
   }
   
   .tour-title {
@@ -98,7 +106,7 @@
   }
   
   .tour-description {
-    color: #666;
+    color: #184e79;
     margin: 0 0 15px 0;
     line-height: 1.5;
   }
@@ -107,20 +115,17 @@
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    color: #555;
+    color: #641919;
   }
   
-  .tour-meta i {
-    margin-right: 8px;
-    color: #4CAF50;
-  }
   
   .book-now-btn {
-    background: #4CAF50;
+    background: #0b5b6c;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    text-decoration: none;   
     cursor: pointer;
     font-weight: bold;
     width: 100%;
@@ -128,7 +133,7 @@
   }
   
   .book-now-btn:hover {
-    background: #45a049;
+    background: #0b5b6c;
   }
   
   .book-now-btn i {
@@ -149,17 +154,28 @@
   }
   
   .tour-card {
-    border: 1px solid #f2f2f2;
+    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    background-color: cadetblue;
-    transition: transform 0.3s;
-  }
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(214, 54, 54, 0.1);
+    text-align: center;
+    max-width: 350px; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
   
   .tour-card:hover {
     transform: translateY(-5px);
   }
-
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 body.dark-mode {
     background-color: #222;
     color: #eee;
