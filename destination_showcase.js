@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const destinationCards = document.querySelectorAll('.destination-card');
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // DOM Elements
     const bookButtons = document.querySelectorAll('.book-btn');
     const modal = document.getElementById('bookingModal');
@@ -93,6 +93,44 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
+        }
+    });
+});
+
+// Function to handle redirection to booking.html with the destination as a query parameter
+function redirectToBooking(destination) {
+    // Redirect to booking.html with the destination name as a query parameter
+    window.location.href = `booking.html?destination=${encodeURIComponent(destination)}`;
+}
+
+// Add event listeners to all "Book Now" buttons
+document.addEventListener("DOMContentLoaded", function () {
+    const bookButtons = document.querySelectorAll(".book-btn");
+    bookButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const destination = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+            redirectToBooking(destination);
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+
+    // Check localStorage for dark mode preference
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+    }
+
+    // Toggle dark mode on checkbox change
+    darkModeToggle.addEventListener("change", function () {
+        if (darkModeToggle.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
         }
     });
 });
