@@ -56,6 +56,15 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: var(--ff-primary);
   background: var(--clr-white);
@@ -180,6 +189,12 @@ Navbar
   box-shadow: var(--dark-shadow);
   z-index: 2;
 }
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Add spacing between the toggle and logo */
+}
 .nav-icons {
   display: none;
 }
@@ -244,6 +259,10 @@ Navbar
   .nav-links {
     height: auto;
     display: flex;
+    margin-left: auto;
+    /* Push the buttons to the right */
+    display: flex;
+    gap: 0.5rem;
   }
   .nav-header {
     padding: 0 0;
@@ -270,6 +289,13 @@ Navbar
     color: var(--clr-primary-8);
   }
 }
+
+.toggle-dark-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*
 =============== 
 Hero
@@ -594,9 +620,14 @@ Footer
 ===============
 */
 .footer {
-  background: var(--clr-grey-1);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 }
 .footer-links,
 .footer-icons {
@@ -829,6 +860,40 @@ btn {
   .nav-icon:hover {
     color: var(--clr-primary-8);
   }
+}
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-grey-5);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  z-index: 10;
+  display: none;
+  /* Initially hidden */
+}
+
+.search-suggestions.active {
+  display: block;
+}
+
+.tour-packages-container {
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
 }
   .hero {
   min-height: 100vh;
