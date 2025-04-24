@@ -60,51 +60,29 @@ document.addEventListener('DOMContentLoaded', function() {
             displayResults(mockResults);
         }, 500);
     }
-    
-    function displayResults(tours) {
-        if (tours.length > 0) {
-          resultsContainer.innerHTML = tours.map(tour => `
-            <div class="tour-card">
-    
-              <div style="padding:15px;">
-<h3>${tour.title}</h3>
-                <p style="text-align: center;">${tour.description.split('. ').slice(1).join('. ')}</p> <!-- Centered and removed first line -->
-                <p><strong>Duration:</strong> ${tour.duration}</p>
-                <p><strong>Price:</strong> $${tour.price}</p>
-                <button class="book-now-btn">Book Now</button>
-              </div>
-            </div>
-          `).join('');
-        } else {
-          resultsContainer.innerHTML = `<p class="no-results">No tours found for this destination. Try another search.</p>`;
-        }
-      }
-});
 
-// function displayResults(tours) {
-//     if (tours.length > 0) {
-//         resultsContainer.innerHTML = tours.map(tour => {
-//             // Split description by newlines and remove the first line
-//             const descriptionLines = tour.description.split('\n');
-//             const descriptionWithoutFirstLine = descriptionLines.slice(1).join('\n').trim();
-            
-//             return `
-//                 <div class="tour-card">
-//                     <img src="${tour.image}" alt="${tour.title}" style="width:100%; height:200px; object-fit:cover;">
-//                     <div style="padding:15px;">
-//                         <h3>${tour.title}</h3>
-//                         <p style="text-align: center;">${descriptionWithoutFirstLine}</p>
-//                         <p><strong>Duration:</strong> ${tour.duration}</p>
-//                         <p><strong>Price:</strong> $${tour.price}</p>
-//                         <button class="book-now-btn">Book Now</button>
-//                     </div>
-//                 </div>
-//             `;
-//         }).join('');
-//     } else {
-//         resultsContainer.innerHTML = `<p class="no-results">No tours found for this destination. Try another search.</p>`;
-//     }
-// }})
+      function displayResults(tours) {
+        if (tours.length > 0) {
+            resultsContainer.innerHTML = tours.map(tour => `
+                <div class="tour-card" style="text-align: center;">
+                
+                    <div style="padding:15px;">
+                        <h3>${tour.title}</h3>
+                        <div class="tour-description">
+                            ${tour.description.split('. ').slice(1).join('. ')}
+                        </div>
+                        <p><strong>Duration:</strong> ${tour.duration}</p>
+                        <p><strong>Price:</strong> $${tour.price}</p>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            `).join('');
+        } else {
+            resultsContainer.innerHTML = `<p class="no-results">No tours found for this destination. Try another search.</p>`;
+        }
+    }})
+   
+
 
 // Helper function to select a suggestion (must be in global scope)
 function selectSuggestion(destination) {
