@@ -14,7 +14,7 @@ body {
 header {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, #0b5b6c, #bbffff); 
+    background: linear-gradient(135deg, #0b5b6c, #2a8ca2); 
     color: white;
 }
 
@@ -45,8 +45,8 @@ header h1 {
     background: white;
     color: #0b5b6c;
 }
-.filter-btn a:hover {
-    color: #12d4ff !important;
+.filter-btn a:hover , .filter-btn.active {
+    color: #0b5b6c !important;
   }
 
 main {
@@ -109,6 +109,11 @@ main {
     transition: background 0.1s ease;
 }
 
+.book-btn a 
+{
+    color: white;
+    text-decoration: none;   /*new thing added*/
+}
 .book-btn:hover {
     background: #2d9b9b;
 }
@@ -241,7 +246,7 @@ body.dark-mode {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: black;
 }
 
 input:checked+.slider:before {
