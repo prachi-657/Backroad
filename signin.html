@@ -65,67 +65,53 @@
       </form>
     </div>
   </section>
-<!-- footer -->
-<footer class="section footer">
-    <!-- footer links -->
-    <ul class="footer-links">
-      <!-- single link -->
-      <li>
-        <a href="#home" class="footer-link scroll-link">home</a>
-      </li>
-      <!--end of single link -->
-      <!-- single link -->
-      <li>
-        <a href="#about" class="footer-link scroll-link">about</a>
-      </li>
-      <!--end of single link -->
-      <!-- single link -->
-      <li>
-        <a href="#services" class="footer-link scroll-link">services</a>
-      </li>
-      <!--end of single link -->
-      <!-- single link -->
-      <li>
-        <a href="#featured" class="footer-link scroll-link">featured</a>
-      </li>
-      <!--end of single link -->
-      <!-- single link -->
-      <li>
-        <a href="#gallery" class="footer-link scroll-link">gallery</a>
-      </li>
-      <!--end of single link -->
-    </ul>
-    <!-- end of footer links -->
-    <!-- footer icons -->
-    <ul class="footer-icons">
-      <!-- single icon -->
-      <li>
-        <a href="#https://.facebook.com" target="_blank" class="footer-icon">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-      <!--end of single icon -->
-      <!-- single icon -->
-      <li>
-        <a href="#https://.twitter.com" target="_blank" class="footer-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <!--end of single icon -->
-      <!-- single icon -->
-      <li>
-        <a href="#https://.instagram.com" target="_blank" class="footer-icon">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </li>
-      <!--end of single icon -->
-    </ul>
-    <!-- end of footer icons -->
-    <p class="copyright">
-      copyright &copy; backroads travel tour Company
-      <span id="date"></span> all rights reserved
-    </p>
-  </footer>
+<!-- Footer Section -->
+      
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Backroad</h3>
+                <p>We create unforgettable travel experiences around the globe with personalized service and attention to detail.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="tours.html">Tours</a>
+                <a href="about.html">About Us</a>
+                <a href="review.html">Review</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Popular Destinations</h3>
+                <a href="#">Paris, France</a>
+                <a href="#">Tokyo, Japan</a>
+                <a href="#">New York, USA</a>
+                <a href="#">Bali, Indonesia</a>
+                <a href="#">Rome, Italy</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Wander City</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                <p><i class="fas fa-envelope"></i> info@Backroad.com</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Backroad. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
   <style>
      /* =============== */
 /* Signup Page Styles */
@@ -247,6 +233,67 @@
 .dark-mode .form-control:focus + .form-label,
 .dark-mode .form-control:not(:placeholder-shown) + .form-label {
   background: var(--clr-grey-9);
+}
+    /* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.footer-column p, .footer-column a {
+    color: #bbb;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #ffcc00;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    background-color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #bbb;
+    font-size: 14px;
 }
   </style>
   <!-- js -->
