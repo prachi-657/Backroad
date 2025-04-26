@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <p><strong>Duration:</strong> ${tour.duration}</p>
                         <p><strong>Price:</strong> $${tour.price}</p>
-                        <button class="book-now-btn">Book Now</button>
+                        <a href="booking.html"><button class="book-now-btn">Book Now</button></a>
                     </div>
                 </div>
             `).join('');
