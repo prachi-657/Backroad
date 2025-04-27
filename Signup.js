@@ -1,49 +1,53 @@
-// Signup Form Validation
-const signupForm = document.getElementById('signup-form');
-const passwordInput = document.getElementById('password');
-const confirmPasswordInput = document.getElementById('confirm-password');
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
 
-signupForm.addEventListener('submit', function(e) {
-  console.log('Form Submitted');
-  console.log('Form Data:', signupForm);
-  e.preventDefault();
+  // Get the signup form element
+  const signupForm = document.getElementById('signup-form');
   
-  // Validate passwords match
-  if (passwordInput.value !== confirmPasswordInput.value) {
-    alert('Passwords do not match!');
-    return;
-  }
-  
-  // Validate password length
-  if (passwordInput.value.length < 8) {
-    alert('Password must be at least 8 characters long!');
-    return;
-  }
-  
-  // Form is valid - process signup
-  const formData = new FormData(signupForm);
-  const userData = {
-    name: formData.get('name'),
-    email: formData.get('email'),
-    password: formData.get('password')
-  };
-  
-  // In a real app, you would send this to your server
-  console.log('User data:', userData);
-  
-  // Show success message and redirect
-  alert('Account created successfully! Welcome to Backroads.');
-  window.location.href = 'index.html';
-});
+  // Add submit event listener
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Create user object from form data
+    const user = {
+      id: Date.now(), // Unique ID
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim().toLowerCase(),
+      password: document.getElementById('password').value
+    };
 
-// Initialize floating labels
-document.querySelectorAll('.form-control').forEach(input => {
-  input.addEventListener('input', function() {
-    const label = this.nextElementSibling;
-    if (this.value) {
-      label.classList.add('active');
-    } else {
-      label.classList.remove('active');
+    // Basic validation
+    if (!user.name || !user.email || !user.password) {
+      alert('Please fill all fields');
+      return;
     }
+
+    // Email format validation
+    if (!/^\S+@\S+\.\S+$/.test(user.email)) {
+      alert('Please enter a valid email');
+      return;
+    }
+
+    // Password length validation
+    if (user.password.length < 8) {
+      alert('Password must be at least 8 characters');
+      return;
+    }
+
+    // Get existing users or initialize empty array
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+    // Check for duplicate email
+    if (users.some(u => u.email === user.email)) {
+      alert('Email already exists!');
+      return;
+    }
+
+    // Save user to localStorage
+    users.push(user);
+    localStorage.setItem('users', JSON.stringify(users));
+    
+    // Success feedback and redirect
+    alert('Registration successful!');
+    window.location.href = 'signin.html';
   });
-});
