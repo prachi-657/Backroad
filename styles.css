@@ -1385,3 +1385,25 @@ Footer
 .dark-mode .nav-signup-btn:hover {
   background: var(--clr-primary-8);
 }
+  /* Error Messages */
+.error-message {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+/* User Greeting */
+#user-greeting {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--clr-primary-9);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.btn-small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
