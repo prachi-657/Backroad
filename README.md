@@ -14,9 +14,9 @@ Prachi --(Manager)
 
 Ravleen Kaur --(Tester)
 
-Piyush  --(Tester)
+Piyush  --(Develeper)
 
-Raman Kaur  ---(Developer)
+Raman Kaur  ---(Lead Developer)
 
 Pushkar Ahuja  ---(Developer)
 
