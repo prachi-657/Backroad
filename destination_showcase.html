@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tours & Travels - Explore Destinations</title>
     <link rel="stylesheet" href="destination_showcase.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <div class="toggle-dark-mode">
-            <label class="switch">
-                <label for="darkModeToggle" class="visually-hidden">Toggle Dark Mode</label>
-                <input type="checkbox" id="darkModeToggle" title="Toggle Dark Mode">
-                <span class="slider"></span>
+        <div class="header-container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
             </label>
-        </div>
+            <nav class="navbar">
+                <div class="nav-center">
+                    <!-- nav header -->
+                    <div class="nav-header">
+                        <img src="./images/logo.svg" class="nav-logo" alt="backroads" />
+                        <button type="button" class="nav-toggle" id="nav-toggle" title="Toggle Navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <!-- nav links -->
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="destination_showcase.html" class="nav-link">Destinations</a></li>
+                        <li><a href="#featured" class="nav-link">Featured</a></li>
+                        <li><a href="review.html" class="nav-link">Review</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="Signup.html" class="nav-signup-btn">Sign Up/Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <br>
         <h1>Explore Dream Destinations</h1>
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
@@ -25,9 +48,7 @@
             <button class="filter-btn" data-filter="historical">Historical</button>
             <button class="filter-btn" data-filter="adventure">Adventure</button>
             <!-- <button class="filter-btn" data-filter="adventure"><a href="searchbar.html">More</a></button> -->
-            <button class="filter-btn" data-filter="adventure">
-                <a href="searchtours.html" style="text-decoration: none; color: white;">More</a>
-              </button>
+            <a href="searchtours.html" class="filter-btn no-decoration white-text">More</a>
         </div>
     </header>
 
@@ -35,28 +56,31 @@
         <div class="destination-container">
             <!-- Religious Destinations -->
             <div class="destination-card" data-category="religious">
-                <img src="https://t4.ftcdn.net/jpg/04/08/25/05/360_F_408250543_MVaEVGeWxb4FiFy7mEGKj8nfYkwoAZON.jpg" alt="Varanasi">
+                <img src="https://t4.ftcdn.net/jpg/04/08/25/05/360_F_408250543_MVaEVGeWxb4FiFy7mEGKj8nfYkwoAZON.jpg"
+                    alt="Varanasi">
                 <h3>Varanasi, India</h3>
                 <p>A sacred city on the banks of the Ganges, known for its ghats and temples.</p>
                 <span class="price">From ₹5,000</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn">Book Now</a>
             </div>
 
             <div class="destination-card" data-category="religious">
-                <img src="https://media.istockphoto.com/id/641067732/photo/jerusalem-old-city-western-wall-with-israeli-flag.jpg?s=612x612&w=0&k=20&c=GYJ98NjcTV_ROIgqqs3g5OdmLEtprvyCZ2_ZFYMq3hk=" alt="Jerusalem">
+                <img src="https://media.istockphoto.com/id/641067732/photo/jerusalem-old-city-western-wall-with-israeli-flag.jpg?s=612x612&w=0&k=20&c=GYJ98NjcTV_ROIgqqs3g5OdmLEtprvyCZ2_ZFYMq3hk="
+                    alt="Jerusalem">
                 <h3>Jerusalem, Israel</h3>
                 <p>A holy city for Judaism, Christianity, and Islam with ancient landmarks.</p>
                 <span class="price">From $1,200</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn">Book Now</a>
             </div>
 
             <!-- Beach Destinations -->
             <div class="destination-card" data-category="beach">
-                <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFsZGl2ZXN8ZW58MHx8MHx8fDA%3D" alt="Maldives">
+                <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFsZGl2ZXN8ZW58MHx8MHx8fDA%3D"
+                    alt="Maldives">
                 <h3>Maldives</h3>
                 <p>Pristine white-sand beaches and crystal-clear waters for a perfect getaway.</p>
                 <span class="price">From $1,500</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
             </div>
 
             <div class="destination-card" data-category="beach">
@@ -64,7 +88,8 @@
                 <h3>Bali, Indonesia</h3>
                 <p>Tropical paradise with lush landscapes and vibrant culture.</p>
                 <span class="price">From $800</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
 
             <!-- Mountain Destinations -->
@@ -73,75 +98,92 @@
                 <h3>Swiss Alps</h3>
                 <p>Snow-capped peaks and breathtaking landscapes for skiing and hiking.</p>
                 <span class="price">From $1,800</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
 
             <div class="destination-card" data-category="mountain">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuIhNfXn_t8NU3cpjfETcRYZtijiNxjUggs3zjOGQk8YJpJ_H2Xn8MHz27PfP3H3gFYUg&usqp=CAU" alt="Himalayas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuIhNfXn_t8NU3cpjfETcRYZtijiNxjUggs3zjOGQk8YJpJ_H2Xn8MHz27PfP3H3gFYUg&usqp=CAU"
+                    alt="Himalayas">
                 <h3>Himalayas, Nepal</h3>
                 <p>Home to Mount Everest and stunning trekking routes.</p>
                 <span class="price">From $1,000</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
 
             <!-- Historical Destinations -->
             <div class="destination-card" data-category="historical">
-                <img src="https://m.economictimes.com/thumb/msid-119336957,width-1200,height-900,resizemode-4,imgsize-118284/egypt-giza-pyramid.jpg" alt="Pyramids">
+                <img src="https://m.economictimes.com/thumb/msid-119336957,width-1200,height-900,resizemode-4,imgsize-118284/egypt-giza-pyramid.jpg"
+                    alt="Pyramids">
                 <h3>Pyramids of Giza, Egypt</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
 
             <!-- Adventure Destinations -->
             <div class="destination-card" data-category="adventure">
-                <img src="https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCity%2Fauckland-city-image.jpg&w=1920&q=90" alt="New Zealand">
+                <img src="https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCity%2Fauckland-city-image.jpg&w=1920&q=90"
+                    alt="New Zealand">
                 <h3>New Zealand</h3>
                 <p>Thrilling adventure sports like bungee jumping and skydiving.</p>
                 <span class="price">From $2,000</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
 
             <!--Switzerland-->
             <div class="destination-card" data-category="beach">
-                <img src="https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCountry%2Fswitzerland-best-time-to-visit.jpg&w=1080&q=75" alt="Pyramids">
+                <img src="https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCountry%2Fswitzerland-best-time-to-visit.jpg&w=1080&q=75"
+                    alt="Pyramids">
                 <h3>Switzerland</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
 
             <!---->
             <div class="destination-card" data-category="religious">
-                <img src="https://www.vaticancitytours.it/wp-content/uploads/2018/08/vatican-city-view.jpg" alt="Pyramids">
+                <img src="https://www.vaticancitytours.it/wp-content/uploads/2018/08/vatican-city-view.jpg"
+                    alt="Pyramids">
                 <h3>Vatican City (Rome, Italy)</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
             <!---->
             <div class="destination-card" data-category="religious">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg/1280px-The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg" alt="Pyramids">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg/1280px-The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg"
+                    alt="Pyramids">
                 <h3>Mecca, Saudi Arabia</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
             <!---->
             <div class="destination-card" data-category="religious">
-                <img src="https://www.phayul.com/wp-content/uploads/The-most-sacred-Buddhist-site-Mahabodhi-temple-in-Bodhgaya-India-PhotoIndiano-travel.png" alt="Pyramids">
+                <img src="https://www.phayul.com/wp-content/uploads/The-most-sacred-Buddhist-site-Mahabodhi-temple-in-Bodhgaya-India-PhotoIndiano-travel.png"
+                    alt="Pyramids">
                 <h3>Bodh Gaya, India</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
             <!---->
             <div class="destination-card" data-category="beach">
-                <img src="https://cdn.britannica.com/57/99557-050-213502D2/Hut-dwellings-Bora-Bora-Society-Islands-French-Polynesia.jpg" alt="Pyramids">
+                <img src="https://cdn.britannica.com/57/99557-050-213502D2/Hut-dwellings-Bora-Bora-Society-Islands-French-Polynesia.jpg"
+                    alt="Pyramids">
                 <h3>Bora Bora, French Polynesia</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
             <!---->
             <div class="destination-card" data-category="beach">
@@ -149,72 +191,112 @@
                 <h3>Palolem Beach, Goa</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
             <!---->
             <div class="destination-card" data-category="beach">
-                <img src="https://t4.ftcdn.net/jpg/05/58/87/41/360_F_558874150_UBXtzzXkvbVgno5GYNAftE3BT9B6mqV9.jpg" alt="Pyramids">
+                <img src="https://t4.ftcdn.net/jpg/05/58/87/41/360_F_558874150_UBXtzzXkvbVgno5GYNAftE3BT9B6mqV9.jpg"
+                    alt="Pyramids">
                 <h3>Varkala Beach, Kerala</h3>
                 <p>Ancient wonders of the world with rich historical significance.</p>
                 <span class="price">From $900</span>
-                <button class="book-btn"><a href="booking.html">Book Now</a></button>
+                <a href="booking.html" class="book-btn no-decoration">Book Now</a>
+
             </div>
             <!---->
-            
         </div>
+        <!-- Exclusive Offers Section -->
+        <div id="exclusive-offers-popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2>Exclusive <span>Offers</span></h2>
+                <div class="offers-container">
+                    <div class="offer-card">
+                        <h3>Special Discount</h3>
+                        <p>Get up to 30% off on selected destinations!</p>
+                        <span class="offer-details">Valid until: <strong>June 30, 2025</strong></span>
+                    </div>
+                    <div class="offer-card">
+                        <h3>Early Bird Deals</h3>
+                        <p>Book early and save big on your next adventure.</p>
+                        <span class="offer-details">Valid until: <strong>July 15, 2025</strong></span>
+                    </div>
+                    <div class="offer-card">
+                        <h3>Group Discounts</h3>
+                        <p>Travel with friends and enjoy exclusive group discounts.</p>
+                        <span class="offer-details">Valid for groups of 5 or more.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
         <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>About Backroad</h3>
-                    <p>We create unforgettable travel experiences around the globe with personalized service and attention to detail.</p>
-                    <div class="social-links">
-                        <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
-                        <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
-                        <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
-                        <a href="http://youtube.com"><i class="fab fa-youtube"></i></a>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>About Backroad</h3>
+                        <p>We create unforgettable travel experiences around the globe with personalized service and
+                            attention to detail.</p>
+                        <div class="social-links">
+                            <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+                            <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+                            <a href="http://youtube.com"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <a href="index.html">Home</a>
+                        <a href="destination_showcase.html">Tours</a>
+                        <a href="about.html">About Us</a>
+                        <a href="review.html">Review</a>
+                        <a href="contact.html">Review</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Popular Destinations</h3>
+                        <a href="#">Paris, France</a>
+                        <a href="#">Tokyo, Japan</a>
+                        <a href="#">New York, USA</a>
+                        <a href="#">Bali, Indonesia</a>
+                        <a href="#">Rome, Italy</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Contact Info</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Wander City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@Backroad.com</p>
                     </div>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="destination_showcase.html">Tours</a>
-                    <a href="about.html">About Us</a>
-                    <a href="review.html">Review</a>
-                    <a href="contact.html">Review</a>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Popular Destinations</h3>
-                    <a href="#">Paris, France</a>
-                    <a href="#">Tokyo, Japan</a>
-                    <a href="#">New York, USA</a>
-                    <a href="#">Bali, Indonesia</a>
-                    <a href="#">Rome, Italy</a>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Wander City</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
-                    <p><i class="fas fa-envelope"></i> info@Backroad.com</p>
+
+                <div class="copyright">
+                    <p>&copy; 2023 Backroad. All Rights Reserved.</p>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Backroad. All Rights Reserved.</p>
-            </div>
-        </div>
 
-    </footer>
+        </footer>
 
-    <script src="destination_showcase.js"></script>
+        <script src="destination_showcase.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggleBtn = document.querySelector(".nav-toggle");
+                const navLinks = document.querySelector(".nav-links");
 
-    
+                toggleBtn.addEventListener("click", () => {
+                    navLinks.classList.toggle("show-links");
+                });
+            });
+        </script>
+        
+
+
 </body>
+
 </html>

@@ -22,115 +22,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Book Now button functionality (can be extended)
-    const bookButtons = document.querySelectorAll('.book-btn');
+    // Redirect to booking.html with destination as a query parameter
+    const bookButtons = document.querySelectorAll('.book-btn a');
     bookButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const destination = button.parentElement.querySelector('h3').textContent;
-            alert(`Booking request for ${destination} has been sent!`);
-        });
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    // DOM Elements
-    const bookButtons = document.querySelectorAll('.book-btn');
-    const modal = document.getElementById('bookingModal');
-    const closeBtn = document.querySelector('.close-btn');
-    const bookingForm = document.getElementById('bookingForm');
-    const bookingSummary = document.getElementById('bookingSummary');
-    const toast = document.getElementById('toast');
-
-    // When "Book Now" is clicked
-    bookButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
             const card = button.closest('.destination-card');
             const destination = card.querySelector('h3').textContent;
-            const price = card.querySelector('.price').textContent;
 
-            // Show booking summary
-            bookingSummary.innerHTML = `
-                <h3>${destination}</h3>
-                <p>${price}</p>
-                <hr>
-            `;
-
-            // Open modal
-            modal.style.display = 'flex';
-
-            // Save booking data (optional)
-            localStorage.setItem('currentBooking', JSON.stringify({ destination, price }));
-        });
-    });
-
-    // Close modal
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Handle form submission
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-
-        // Simulate API call (replace with real fetch() in production)
-        setTimeout(() => {
-            // Show success toast
-            toast.style.display = 'block';
-
-            // Redirect after 2 seconds
-            setTimeout(() => {
-                window.location.href = 'booking.html';
-            }, 2000);
-        }, 1000);
-    });
-
-    // Close modal if clicked outside
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-// Function to handle redirection to booking.html with the destination as a query parameter
-function redirectToBooking(destination) {
-    // Redirect to booking.html with the destination name as a query parameter
-    window.location.href = `booking.html?destination=${encodeURIComponent(destination)}`;
-}
-
-// Add event listeners to all "Book Now" buttons
-document.addEventListener("DOMContentLoaded", function () {
-    const bookButtons = document.querySelectorAll(".book-btn");
-    bookButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const destination = this.getAttribute("onclick").match(/'([^']+)'/)[1];
-            redirectToBooking(destination);
+            // Redirect to booking.html with the destination as a query parameter
+            window.location.href = `booking.html?destination=${encodeURIComponent(destination)}`;
         });
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
+// Exclusive Offers Pop-Up Functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("exclusive-offers-popup");
+    const popupBtn = document.querySelector(".filter-buttons #exclusive-offers-btn");
+    const closePopup = document.querySelector(".close-popup");
 
-    // Check localStorage for dark mode preference
-    if (localStorage.getItem("darkMode") === "enabled") {
-        document.body.classList.add("dark-mode");
-        darkModeToggle.checked = true;
-    }
+    // Show the pop-up when the button is clicked
+    popupBtn.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+        popup.classList.add("visible");
+    });
 
-    // Toggle dark mode on checkbox change
-    darkModeToggle.addEventListener("change", function () {
-        if (darkModeToggle.checked) {
-            document.body.classList.add("dark-mode");
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            document.body.classList.remove("dark-mode");
-            localStorage.setItem("darkMode", "disabled");
+    // Close the pop-up when the close button is clicked
+    closePopup.addEventListener("click", () => {
+        popup.classList.remove("visible");
+        popup.classList.add("hidden");
+    });
+
+    // Close the pop-up when clicking outside the content
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("visible");
+            popup.classList.add("hidden");
         }
     });
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show-links");
+    });
 });
+
