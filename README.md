@@ -1,4 +1,4 @@
-🏞️ BACKROAD Tours & Travels
+ 🏞️ BACKROAD Tours & Travels
 
 Welcome to BACKROAD Tours & Travels, your ultimate adventure partner! We specialize in offbeat, scenic, and thrilling travel experiences that take you beyond the usual tourist trails.
 
@@ -14,9 +14,9 @@ Prachi --(Manager)
 
 Ravleen Kaur --(Tester)
 
-Piyush  --(Tester)
+Piyush  --(Develeper)
 
-Raman Kaur  ---(Developer)
+Raman Kaur  ---(Lead Developer)
 
 Pushkar Ahuja  ---(Developer)
 
