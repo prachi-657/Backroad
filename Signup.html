@@ -5,38 +5,265 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Backroads || Sign Up</title>
-  <!-- favicon -->
-  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-  <!-- font-awesome -->
-  <link rel="stylesheet" href="../fontawesome-free-5.12.1-web/css/all.min.css" />
-  <!-- styles css -->
-  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* =============== */
+/* Signup Page Styles */
+/* =============== */
+body {
+  background: linear-gradient(135deg, #0b5b6c, #2a8ca2);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup-section {
+  padding: 5rem 0;
+  background: transparent;
+}
+
+.signup-center {
+  display: grid;
+  gap: 2rem;
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(42, 157, 143, 0.10), 0 1.5px 6px rgba(0,0,0,0.05);
+  border: 1px solid rgba(42, 157, 143, 0.10);
+}
+
+.signup-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.signup-info h2 {
+  color: #2a9d8f;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.signup-info h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e9c46a;
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
+}
+
+.signup-info p {
+  color: #495057;
+  font-size: 1rem;
+}
+
+.signup-form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #264653;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2a9d8f;
+  box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.15);
+  background: #fff;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #2a9d8f, #25a49d);
+  color: #fff;
+  border: none;QA
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(42, 157, 143, 0.10);
+  cursor: pointer;
+}
+.signup-btn:hover {
+  background: #21867a;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 4px 16px rgba(42, 157, 143, 0.15);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.login-link a {
+  color: #e9c46a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.login-link a:hover {
+  color: #2a9d8f;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .signup-center {
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.footer-column p, .footer-column a {
+  color: #bbb;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  tra
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .signup-center {
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.footer-column p, .footer-column a {
+  color: #bbb;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #ffcc00;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  background-color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #bbb;
+  font-size: 14px;
+}
+  
+  </style>
 </head>
 <body>
+
+    <header id="home"></header>
   <!-- navbar -->
   <nav class="navbar">
     <div class="nav-center">
+      <!-- nav header -->
       <div class="nav-header">
-        <img src="../images/logo.svg" class="nav-logo" alt="Backroads" />
+        <img src="./images/logo.svg" class="nav-logo" alt="backroads" />
         <button type="button" class="nav-toggle" id="nav-toggle">
           <i class="fas fa-bars"></i>
         </button>
       </div>
+      <!-- nav links -->
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">home</a></li>
-        <li><a href="index.html#about" class="nav-link">about</a></li>
-        <li><a href="index.html#services" class="nav-link">services</a></li>
-        <li><a href="index.html#featured" class="nav-link">tours</a></li>
-        <li><a href="index.html#gallery" class="nav-link">gallery</a></li>
-      </ul>
-      <ul class="nav-icons">
-        <li><a href="#https://.facebook.com" target="_blank" class="nav-icon"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="#https://.twitter.com" target="_blank" class="nav-icon"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#https://.instagram.com" target="_blank" class="nav-icon"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="destination_showcase.html" class="nav-link">Destinations</a></li>
+        <li><a href="#featured" class="nav-link">Featured</a></li>
+        <li><a href="review.html" class="nav-link">Review</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="Signup.html" class="nav-signup-btn">Sign Up/Login</a></li>
       </ul>
     </div>
   </nav>
-
   <!-- signup section -->
   <section class="section signup-section">
     <div class="section-center signup-center">
@@ -117,191 +344,6 @@
         </div>
     </div>
 </footer>
-  <style>
-    /* =============== */
-/* Signup Page Styles */
-/* =============== */
-.signup-section {
-  padding: 5rem 0;
-  background: var(--clr-grey-10);
-}
-
-.signup-center {
-  display: grid;
-  gap: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-}
-
-.signup-info {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.signup-info h2 {
-  color: var(--clr-primary-5);
-  margin-bottom: 1rem;
-}
-
-.signup-form {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.form-group {
-  position: relative;
-}
-
-.form-control {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid var(--clr-grey-8);
-  border-radius: var(--radius);
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: var(--clr-primary-5);
-  box-shadow: 0 0 0 2px var(--clr-primary-8);
-}
-
-.form-label {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  color: var(--clr-grey-5);
-  transition: var(--transition);
-  pointer-events: none;
-}
-
-.form-control:focus + .form-label,
-.form-control:not(:placeholder-shown) + .form-label {
-  top: -0.5rem;
-  left: 0.8rem;
-  font-size: 0.8rem;
-  background: var(--clr-white);
-  padding: 0 0.2rem;
-  color: var(--clr-primary-5);
-}
-
-.form-text {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--clr-grey-5);
-  font-size: 0.8rem;
-}
-
-.signup-btn {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-.login-link {
-  text-align: center;
-  margin-top: 1rem;
-  color: var(--clr-grey-5);
-}
-
-.login-link a {
-  color: var(--clr-primary-5);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.login-link a:hover {
-  color: var(--clr-primary-1);
-}
-
-.dark-mode .signup-center {
-  background: var(--clr-grey-9);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-.dark-mode .form-control {
-  background: var(--clr-grey-8);
-  border-color: var(--clr-grey-7);
-  color: var(--clr-grey-1);
-}
-
-.dark-mode .form-label {
-  background: var(--clr-grey-9);
-}
-
-.dark-mode .form-control:focus + .form-label,
-.dark-mode .form-control:not(:placeholder-shown) + .form-label {
-  background: var(--clr-grey-9);
-}
-/* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #ffcc00;
-        }
-        
-        .footer-column p, .footer-column a {
-            color: #bbb;
-            margin-bottom: 10px;
-            display: block;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column a:hover {
-            color: #ffcc00;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            color: white;
-            background-color: #333;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: #ffcc00;
-            color: #333;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #bbb;
-            font-size: 14px;
-        }
-
-  </style>
   <!-- js -->
   <script src="../js/app.js"></script>
   <script src="../js/signup.js"></script>
